@@ -1,0 +1,61 @@
+Tue Jan 14 11:03:25 2025 [22304][1][SECURITY] OutboundEmail::checkSavePermissions - not logged in - skipping check
+Tue Jan 14 11:03:25 2025 [22304][1][FATAL] User update error: Temp User is not retrieved at ID 1, boolean given
+Tue Jan 14 11:03:25 2025 [22304][1][FATAL] Email address save error
+Tue Jan 14 11:03:33 2025 [22304][1][SECURITY] Invalid ext  logger_file_ext : ''.
+Tue Jan 14 11:03:33 2025 [22304][1][SECURITY] Setting logger_file_ext to '.log'.
+Tue Jan 14 11:03:33 2025 [22304][1][SECURITY] Setting logger_file_name to ''.
+Tue Jan 14 11:03:33 2025 [22304][1][SECURITY] Log file extension can't be blank.
+Tue Jan 14 11:03:33 2025 [22304][1][SECURITY] Setting logger_file_name to ''.
+Tue Jan 14 11:03:33 2025 [22304][1][SECURITY] Log file extension can't be blank.
+Tue Jan 14 11:03:48 2025 [22304][1][FATAL] Email address save error
+Tue Jan 14 11:06:32 2025 [22304][1][FATAL] log call at: modules/EmailMan/tpls/config.tpl - styleChecked is not set
+Tue Jan 14 11:06:34 2025 [22304][1][FATAL] log call at: modules/EmailMan/tpls/config.tpl - styleChecked is not set
+Tue Jan 14 11:08:14 2025 [22304][1][FATAL] Email address save error
+Tue Jan 14 11:32:39 2025 [22304][1][FATAL] Email address save error
+Tue Jan 14 15:42:07 2025 [32840][1][FATAL] Email address save error
+Wed Jan 15 14:47:16 2025 [32840][1][FATAL] Email address save error
+Wed Jan 15 14:56:23 2025 [32840][1][FATAL] Email address save error
+Mon Jan 27 11:18:30 2025 [8172][1][FATAL] Email address save error
+Mon Jan 27 11:19:16 2025 [8172][1][FATAL] ZIP Error(0): Status(9)
+Mon Jan 27 11:21:10 2025 [8172][1][FATAL] Email address save error
+Tue Feb  4 11:15:18 2025 [27296][1][FATAL] Email address save error
+Tue Feb  4 11:15:24 2025 [27296][1][FATAL] Email address save error
+Wed Feb  5 13:24:50 2025 [12780][1][FATAL] ВНИМАНИЕ: В процессе загрузки произошла ошибка, для решения вопроса свяжитесь с системным администратором.
+Mon Feb 10 09:01:33 2025 [18992][1][FATAL] Email address save error
+Mon Feb 17 10:25:08 2025 [7440][1][FATAL] Email address save error
+Mon Feb 17 10:45:01 2025 [7440][1][FATAL] Email address save error
+Mon Feb 17 10:49:39 2025 [7440][1][FATAL] Email address save error
+Mon Feb 17 11:05:09 2025 [7440][1][FATAL] Email address save error
+Mon Feb 17 11:09:22 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:22:23 2025 [7440][1][FATAL] ВНИМАНИЕ: В процессе загрузки произошла ошибка, для решения вопроса свяжитесь с системным администратором.
+Tue Feb 18 08:31:21 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:32:08 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:32:11 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:32:55 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:34:39 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:34:54 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:35:13 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:36:59 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:39:19 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:49:01 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:49:18 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:49:33 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:51:25 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:55:53 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:56:26 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:56:52 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 08:57:11 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 09:02:14 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 09:02:32 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 09:02:52 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 09:29:02 2025 [7440][1][FATAL] Email address save error
+Tue Feb 18 09:29:13 2025 [7440][1][FATAL] Email address save error
+Tue Feb 25 12:26:50 2025 [21420][1][FATAL] Email address save error
+Tue Feb 25 12:36:26 2025 [21420][1][FATAL] Email address save error
+Tue Feb 25 12:37:12 2025 [21420][1][FATAL] Email address save error
+Fri Feb 28 17:04:52 2025 [29988][1][FATAL] ВНИМАНИЕ: В процессе загрузки произошла ошибка, для решения вопроса свяжитесь с системным администратором.
+Tue Mar  4 08:24:30 2025 [28148][1][FATAL] Email address save error
+Tue Mar  4 09:57:39 2025 [28148][1][FATAL] Email address save error
+Tue Mar  4 13:03:17 2025 [24444][1][FATAL] Email address save error
+Mon Mar 10 08:24:57 2025 [13224][1][FATAL] Exception handling in C:\Apache24\htdocs\crm\public\legacy\include\MVC\Controller\SugarController.php:397
+Mon Mar 10 08:24:57 2025 [13224][1][FATAL] Exception in Controller: Действие не определено: record
