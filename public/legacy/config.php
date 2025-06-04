@@ -1,5 +1,5 @@
 <?php
-// created: 2025-02-17 11:02:11
+// created: 2025-06-04 16:05:57
 $sugar_config = array (
   'addAjaxBannedModules' => 
   array (
@@ -122,7 +122,7 @@ $sugar_config = array (
     'db_host_instance' => '',
     'db_user_name' => 'root',
     'db_password' => 'Etdcvg241',
-    'db_name' => 'crm',
+    'db_name' => 'basecrm',
     'db_type' => 'mysql',
     'db_port' => '3306',
     'db_manager' => 'MysqliManager',
@@ -158,7 +158,7 @@ $sugar_config = array (
     'AOW_WorkFlow' => false,
   ),
   'default_module_favicon' => false,
-  'default_navigation_paradigm' => 'm',
+  'default_navigation_paradigm' => 'gm',
   'default_number_grouping_seperator' => ',',
   'default_password' => '',
   'default_permissions' => 
@@ -253,7 +253,7 @@ $sugar_config = array (
     'timeout' => 86400,
   ),
   'js_custom_version' => 1,
-  'js_lang_version' => 11,
+  'js_lang_version' => 13,
   'languages' => 
   array (
     'en_us' => 'English (US)',

@@ -1,5 +1,5 @@
 <?php
-// created: 2025-02-28 17:27:09
+// created: 2025-06-04 16:06:37
 $mod_strings = array (
   'LBL_EDIT_LAYOUT' => 'Правка расположения',
   'LBL_EDIT_FIELDS' => 'Правка пользовательских полей',

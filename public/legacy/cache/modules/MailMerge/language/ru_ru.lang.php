@@ -1,5 +1,5 @@
 <?php
-// created: 2025-02-28 17:27:08
+// created: 2025-06-04 16:06:36
 $mod_strings = array (
   'LBL_STEP_1' => 'Шаг 1: Выбор модуля и шаблона',
   'LBL_MAILMERGE_MODULE' => 'Выбор модуля: ',
