@@ -5061,6 +5061,15 @@ return [PHP_INT_MAX, [
                 'project' => 'Проект',
                 'freezed' => 'В заморозке',
             ],
+            'sale_stage_task_list' => [
+                'not_sales' => 'Не продажи',
+                'cold_strategy' => 'Холодный стратег.',
+                'cold_start' => 'Холодный начат.',
+                'warm_task' => 'Теплый (задание)',
+                'hot_commercial' => 'Горячий (коммерческое)',
+                'project' => 'Проект',
+                'freezed' => 'В заморозке',
+            ],
         ],
     ],
     'modStrings' => [
@@ -7412,8 +7421,10 @@ return [PHP_INT_MAX, [
                 'LBL_ASSIGNED_TO_ID' => 'Ответственный(ая)',
                 'LBL_SECURITYGROUPS' => 'Группы пользователей',
                 'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Группы пользователей',
-                'LBL_SALES_STAGE' => 'Стадия продаж',
+                'LBL_SALES_STAGE' => 'cтадия продаж',
                 'LBL_PERSON_VIEW' => 'ВИД ЛИДА',
+                'LBL_SALE_STAGE_TASK' => 'Стадия продаж',
+                'LBL_VIEW_LID' => 'Вид ЛИДА',
             ],
             'notes' => [
                 'ERR_DELETE_RECORD' => 'Вы должны указать конкретную запись перед удалением.',

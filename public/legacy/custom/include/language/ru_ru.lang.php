@@ -66,3 +66,12 @@ $app_list_strings['project_task_status_options']=array (
   'On_Check' => 'На проверке',
   'Completed' => 'Завершена',
 );
+$app_list_strings['sale_stage_task_list']=array (
+  'not_sales' => 'Не продажи',
+  'cold_strategy' => 'Холодный стратег.',
+  'cold_start' => 'Холодный начат.',
+  'warm_task' => 'Теплый (задание)',
+  'hot_commercial' => 'Горячий (коммерческое)',
+  'project' => 'Проект',
+  'freezed' => 'В заморозке',
+);

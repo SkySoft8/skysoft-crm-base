@@ -105,7 +105,7 @@ array (
     ),
     'panels' => 
     array (
-      'lbl_task_information' => 
+      'LBL_TASK_INFORMATION' => 
       array (
         0 => 
         array (
@@ -116,22 +116,21 @@ array (
           ),
           1 => 
           array (
-            'name' => 'sales_stage_c',
+            'name' => 'sale_stage_task_c',
             'studio' => 'visible',
-            'label' => 'LBL_SALES_STAGE',
+            'label' => 'LBL_SALE_STAGE_TASK',
           ),
         ),
         1 => 
         array (
-          0 => 'date_start',
+          0 => 'date_due',
           1 => 'status',
         ),
         2 => 
         array (
-          0 => 'date_due',
-          1 => 
+          0 => 
           array (
-            'name' => 'person_view_c',
+            'name' => 'view_lid_c',
             'studio' => 'visible',
             'label' => 'LBL_PERSON_VIEW',
           ),

@@ -1,5 +1,5 @@
 <?php
-// created: 2025-06-04 16:06:27
+// created: 2025-06-04 17:28:50
 $mod_strings = array (
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Дата создания',
@@ -72,6 +72,8 @@ $mod_strings = array (
   'LBL_EDITLAYOUT' => 'Изменить макет',
   'LBL_DATE_DUE' => 'Дата выполнения',
   'LBL_RELATED_TO' => 'Относится к:',
-  'LBL_SALES_STAGE' => 'Стадия продаж',
+  'LBL_SALES_STAGE' => 'cтадия продаж',
   'LBL_PERSON_VIEW' => 'ВИД ЛИДА',
+  'LBL_SALE_STAGE_TASK' => 'Стадия продаж',
+  'LBL_VIEW_LID' => 'Вид ЛИДА',
 );
