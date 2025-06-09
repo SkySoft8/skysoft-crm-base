@@ -1,5 +1,5 @@
 <?php
-// created: 2025-06-04 16:06:34
+// created: 2025-06-09 14:13:04
 $mod_strings = array (
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Дата создания',
