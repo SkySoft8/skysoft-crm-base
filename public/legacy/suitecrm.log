@@ -90,3 +90,13 @@ Wed Jun  4 16:17:11 2025 [71248][1][FATAL] Email address save error
 Wed Jun  4 16:17:58 2025 [71248][1][FATAL] Email address save error
 Wed Jun  4 16:40:54 2025 [71248][1][FATAL] Email address save error
 Wed Jun  4 17:14:31 2025 [71248][1][FATAL] Email address save error
+Thu Oct 16 07:53:39 2025 [5316][1][FATAL] Email address save error
+Thu Oct 16 07:56:15 2025 [5316][1][FATAL] Email address save error
+Fri Nov  7 13:46:11 2025 [27760][1][FATAL] Email address save error
+Fri Nov 7 2025 at 14:56:12 [31080][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Fri Nov 7 2025 at 14:56:26 [31080][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Fri Nov 7 2025 at 15:19:41 [31740][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Fri Nov 7 2025 at 15:19:53 [31740][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Fri Nov 14 2025 at 09:02:57 [17368][1][FATAL] IP Address mismatch: SESSION IP: ::1 CLIENT IP: 127.0.0.1
+Fri Nov 14 2025 at 09:03:38 [17368][1][FATAL] IP Address mismatch: SESSION IP: ::1 CLIENT IP: 127.0.0.1
+Wed Nov 19 2025 at 08:56:41 [13028][1][FATAL] ZIP Error(0): Status(9)
