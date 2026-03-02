@@ -341,11 +341,6 @@
     array (
       'name' => 'currency_id',
       'type' => 'id',
-      'initDefaultProcess' => 'currency-default',
-      'defaultValueModes' => 
-      array (
-        0 => 'create',
-      ),
       'group' => 'currency_id',
       'vname' => 'LBL_CURRENCY',
       'function' => 

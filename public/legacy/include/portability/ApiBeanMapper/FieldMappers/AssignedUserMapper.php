@@ -42,7 +42,7 @@ class AssignedUserMapper implements FieldMapperInterface
     /**
      * @inheritDoc
      */
-    public function toApi(SugarBean $bean, array &$container, string $alternativeName = ''): void
+  public function toApi(SugarBean $bean, array &$container, string $alternativeName = ''): void
     {
         $name = self::FIELD_NAME;
 
@@ -56,13 +56,14 @@ class AssignedUserMapper implements FieldMapperInterface
             return;
         }
 
-        $container[$name] = get_user_name($bean->assigned_user_id);
-
         $assignedUser = BeanFactory::getBean('Users', $bean->assigned_user_id);
 
+        $userName = $assignedUser->user_name;
         if (!empty(showFullName())) {
-            $container['full_name'] = $assignedUser->full_name ?? '';
+            $userName = $assignedUser->full_name;
         }
+
+        $container[$name] = $assignedUser->full_name;
     }
 
     /**
