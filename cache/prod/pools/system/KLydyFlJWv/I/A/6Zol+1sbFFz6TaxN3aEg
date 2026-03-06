@@ -3971,7 +3971,7 @@ return [PHP_INT_MAX, [
                     'module' => '',
                     'id' => '',
                     'sortable' => true,
-                    'type' => 'datetime',
+                    'type' => 'composite',
                     'vardefBased' => true,
                     'display' => 'none',
                     'readonly' => true,
@@ -3990,6 +3990,134 @@ return [PHP_INT_MAX, [
                                 [
                                     'value' => '__SuiteCRMEmptyString__',
                                     'labelKey' => 'LBL_EMPTY',
+                                ],
+                            ],
+                        ],
+                        'layout' => [
+                            'operator',
+                            'target',
+                            'start',
+                            'end',
+                        ],
+                        'display' => 'inline',
+                        'attributeFields' => [
+                            'operator' => [
+                                'name' => 'operator',
+                                'type' => 'enum',
+                                'vname' => 'LBL_OPERATOR',
+                                'options' => 'date_range_search_dom',
+                                'default' => '=',
+                                'defaultValueModes' => [
+                                    'filter',
+                                    'edit',
+                                ],
+                            ],
+                            'target' => [
+                                'name' => 'target',
+                                'type' => 'datetime',
+                                'display' => 'none',
+                                'logic' => [
+                                    'display' => [
+                                        'key' => 'displayType',
+                                        'modes' => [
+                                            'edit',
+                                            'detail',
+                                            'create',
+                                            'filter',
+                                        ],
+                                        'params' => [
+                                            'attributeDependencies' => [
+                                                [
+                                                    'field' => 'date_entered',
+                                                    'attribute' => 'operator',
+                                                ],
+                                            ],
+                                            'targetDisplayType' => 'default',
+                                            'activeOnAttributes' => [
+                                                'date_entered' => [
+                                                    'operator' => [
+                                                        '=',
+                                                        'not_equal',
+                                                        'greater_than',
+                                                        'less_than',
+                                                    ],
+                                                ],
+                                            ],
+                                        ],
+                                    ],
+                                ],
+                            ],
+                            'start' => [
+                                'name' => 'start',
+                                'type' => 'datetime',
+                                'vname' => 'LBL_START',
+                                'showLabel' => [
+                                    '*',
+                                ],
+                                'display' => 'none',
+                                'logic' => [
+                                    'display' => [
+                                        'key' => 'displayType',
+                                        'modes' => [
+                                            'edit',
+                                            'detail',
+                                            'create',
+                                            'filter',
+                                        ],
+                                        'params' => [
+                                            'attributeDependencies' => [
+                                                [
+                                                    'field' => 'date_entered',
+                                                    'attribute' => 'operator',
+                                                ],
+                                            ],
+                                            'targetDisplayType' => 'default',
+                                            'activeOnAttributes' => [
+                                                'date_entered' => [
+                                                    'operator' => [
+                                                        'between',
+                                                    ],
+                                                ],
+                                            ],
+                                        ],
+                                    ],
+                                ],
+                            ],
+                            'end' => [
+                                'name' => 'end',
+                                'type' => 'datetime',
+                                'vname' => 'LBL_END',
+                                'labelKey' => 'LBL_END',
+                                'showLabel' => [
+                                    '*',
+                                ],
+                                'display' => 'none',
+                                'logic' => [
+                                    'display' => [
+                                        'key' => 'displayType',
+                                        'modes' => [
+                                            'edit',
+                                            'detail',
+                                            'create',
+                                            'filter',
+                                        ],
+                                        'params' => [
+                                            'attributeDependencies' => [
+                                                [
+                                                    'field' => 'date_entered',
+                                                    'attribute' => 'operator',
+                                                ],
+                                            ],
+                                            'targetDisplayType' => 'default',
+                                            'activeOnAttributes' => [
+                                                'date_entered' => [
+                                                    'operator' => [
+                                                        'between',
+                                                    ],
+                                                ],
+                                            ],
+                                        ],
+                                    ],
                                 ],
                             ],
                         ],
@@ -4037,7 +4165,7 @@ return [PHP_INT_MAX, [
                     'module' => '',
                     'id' => '',
                     'sortable' => true,
-                    'type' => 'datetime',
+                    'type' => 'composite',
                     'vardefBased' => true,
                     'display' => 'none',
                     'readonly' => true,
@@ -4056,6 +4184,134 @@ return [PHP_INT_MAX, [
                                 [
                                     'value' => '__SuiteCRMEmptyString__',
                                     'labelKey' => 'LBL_EMPTY',
+                                ],
+                            ],
+                        ],
+                        'layout' => [
+                            'operator',
+                            'target',
+                            'start',
+                            'end',
+                        ],
+                        'display' => 'inline',
+                        'attributeFields' => [
+                            'operator' => [
+                                'name' => 'operator',
+                                'type' => 'enum',
+                                'vname' => 'LBL_OPERATOR',
+                                'options' => 'date_range_search_dom',
+                                'default' => '=',
+                                'defaultValueModes' => [
+                                    'filter',
+                                    'edit',
+                                ],
+                            ],
+                            'target' => [
+                                'name' => 'target',
+                                'type' => 'datetime',
+                                'display' => 'none',
+                                'logic' => [
+                                    'display' => [
+                                        'key' => 'displayType',
+                                        'modes' => [
+                                            'edit',
+                                            'detail',
+                                            'create',
+                                            'filter',
+                                        ],
+                                        'params' => [
+                                            'attributeDependencies' => [
+                                                [
+                                                    'field' => 'date_modified',
+                                                    'attribute' => 'operator',
+                                                ],
+                                            ],
+                                            'targetDisplayType' => 'default',
+                                            'activeOnAttributes' => [
+                                                'date_modified' => [
+                                                    'operator' => [
+                                                        '=',
+                                                        'not_equal',
+                                                        'greater_than',
+                                                        'less_than',
+                                                    ],
+                                                ],
+                                            ],
+                                        ],
+                                    ],
+                                ],
+                            ],
+                            'start' => [
+                                'name' => 'start',
+                                'type' => 'datetime',
+                                'vname' => 'LBL_START',
+                                'showLabel' => [
+                                    '*',
+                                ],
+                                'display' => 'none',
+                                'logic' => [
+                                    'display' => [
+                                        'key' => 'displayType',
+                                        'modes' => [
+                                            'edit',
+                                            'detail',
+                                            'create',
+                                            'filter',
+                                        ],
+                                        'params' => [
+                                            'attributeDependencies' => [
+                                                [
+                                                    'field' => 'date_modified',
+                                                    'attribute' => 'operator',
+                                                ],
+                                            ],
+                                            'targetDisplayType' => 'default',
+                                            'activeOnAttributes' => [
+                                                'date_modified' => [
+                                                    'operator' => [
+                                                        'between',
+                                                    ],
+                                                ],
+                                            ],
+                                        ],
+                                    ],
+                                ],
+                            ],
+                            'end' => [
+                                'name' => 'end',
+                                'type' => 'datetime',
+                                'vname' => 'LBL_END',
+                                'labelKey' => 'LBL_END',
+                                'showLabel' => [
+                                    '*',
+                                ],
+                                'display' => 'none',
+                                'logic' => [
+                                    'display' => [
+                                        'key' => 'displayType',
+                                        'modes' => [
+                                            'edit',
+                                            'detail',
+                                            'create',
+                                            'filter',
+                                        ],
+                                        'params' => [
+                                            'attributeDependencies' => [
+                                                [
+                                                    'field' => 'date_modified',
+                                                    'attribute' => 'operator',
+                                                ],
+                                            ],
+                                            'targetDisplayType' => 'default',
+                                            'activeOnAttributes' => [
+                                                'date_modified' => [
+                                                    'operator' => [
+                                                        'between',
+                                                    ],
+                                                ],
+                                            ],
+                                        ],
+                                    ],
                                 ],
                             ],
                         ],

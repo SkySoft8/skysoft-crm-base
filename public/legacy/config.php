@@ -1,5 +1,5 @@
 <?php
-// created: 2025-06-04 16:05:57
+// created: 2026-03-06 12:45:08
 $sugar_config = array (
   'addAjaxBannedModules' => 
   array (
@@ -85,6 +85,8 @@ $sugar_config = array (
     'enable_repeat' => true,
     'max_repeat_count' => 1000,
   ),
+  'campaign_emails_per_run_default' => 50,
+  'campaign_marketing_items_per_run_default' => 3,
   'chartEngine' => 'Jit',
   'common_ml_dir' => '',
   'create_default_user' => false,
@@ -93,6 +95,10 @@ $sugar_config = array (
     'max_cron_jobs' => 10,
     'max_cron_runtime' => 30,
     'min_cron_interval' => 30,
+    'allowed_cron_users' => 
+    array (
+      0 => 'desktop-ri904ov\\lbvfv',
+    ),
   ),
   'dashlet_auto_refresh_min' => 30,
   'dashlet_display_row_options' => 
@@ -137,7 +143,7 @@ $sugar_config = array (
     'ssl' => false,
   ),
   'default_action' => 'index',
-  'default_charset' => NULL,
+  'default_charset' => 'UTF-8',
   'default_currency_iso4217' => 'USD',
   'default_currency_name' => 'US Dollar',
   'default_currency_significant_digits' => '2',
@@ -245,6 +251,7 @@ $sugar_config = array (
   'import_max_execution_time' => 3600,
   'import_max_records_per_file' => 100,
   'import_max_records_total_limit' => '',
+  'installed' => true,
   'installer_locked' => true,
   'jobs' => 
   array (
@@ -270,7 +277,7 @@ $sugar_config = array (
   'lock_default_user_name' => false,
   'lock_homepage' => false,
   'lock_subpanels' => false,
-  'log_dir' => '.',
+  'log_dir' => '../../logs/legacy',
   'log_file' => 'suitecrm.log',
   'log_memory_usage' => false,
   'logger' => 
@@ -288,6 +295,8 @@ $sugar_config = array (
   ),
   'login_language' => true,
   'max_dashlets_homepage' => '15',
+  'max_temp_file_batch_per_table' => '50',
+  'max_temp_file_lifetime' => '72 hour',
   'name_formats' => 
   array (
     's f l' => 's f l',
@@ -333,7 +342,7 @@ $sugar_config = array (
       3 => 'Administration',
       4 => 'Sync',
     ),
-    'default_limit' => 1000,
+    'default_limit' => 20000,
   ),
   'rss_cache_time' => '10800',
   'save_query' => 'all',
@@ -395,6 +404,7 @@ $sugar_config = array (
     'confirm_opt_in_template_id' => '54106d1d-9843-3810-1007-678644356413',
   ),
   'system_name' => 'SuiteCRM',
+  'test_email_limit' => 50,
   'time_formats' => 
   array (
     'H:i' => '23:00',
@@ -411,6 +421,7 @@ $sugar_config = array (
   'timef' => 'H:i',
   'tmp_dir' => 'cache/xml/',
   'tracker_max_display_length' => 15,
+  'trackers_enabled' => true,
   'translation_string_prefix' => false,
   'trusted_hosts' => 
   array (

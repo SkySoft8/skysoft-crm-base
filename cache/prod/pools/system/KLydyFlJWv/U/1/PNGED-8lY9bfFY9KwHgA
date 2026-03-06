@@ -90,7 +90,7 @@ return [PHP_INT_MAX, [
                 ],
                 'outbound-email-accounts-listview-current-sort' => [
                     'orderBy' => '',
-                    'sortOrder' => 'DESC',
+                    'sortOrder' => 'NONE',
                 ],
                 'administration-recordview-current-record-pagination' => [
                     'pagination' => [
@@ -99,13 +99,16 @@ return [PHP_INT_MAX, [
                         'previous' => -1,
                         'next' => -1,
                         'last' => 0,
-                        'total' => 1,
+                        'total' => 2,
                         'pageFirst' => 1,
-                        'pageLast' => 1,
+                        'pageLast' => 2,
                     ],
                     'recordIds' => [
                         [
-                            'id' => '227fba6e-e22f-bdb2-1694-678644c9a12f',
+                            'id' => '78eee375-0419-4592-6f37-685ccb3451a7',
+                        ],
+                        [
+                            'id' => 'e85b0bae-3a7f-926c-61c2-685cc5e244fe',
                         ],
                     ],
                 ],
@@ -126,7 +129,7 @@ return [PHP_INT_MAX, [
                 ],
                 'accounts-listview-current-sort' => [
                     'orderBy' => '',
-                    'sortOrder' => 'DESC',
+                    'sortOrder' => 'NONE',
                 ],
                 'accounts-recordview-current-record-pagination' => [
                     'pagination' => [
@@ -159,7 +162,7 @@ return [PHP_INT_MAX, [
                 ],
                 'contacts-listview-current-sort' => [
                     'orderBy' => '',
-                    'sortOrder' => 'DESC',
+                    'sortOrder' => 'NONE',
                 ],
                 'contacts-recordview-current-record-pagination' => [
                     'pagination' => [
@@ -192,7 +195,7 @@ return [PHP_INT_MAX, [
                 ],
                 'opportunities-listview-current-sort' => [
                     'orderBy' => '',
-                    'sortOrder' => 'DESC',
+                    'sortOrder' => 'NONE',
                 ],
                 'opportunities-recordview-current-record-pagination' => [
                     'pagination' => [
@@ -265,34 +268,12 @@ return [PHP_INT_MAX, [
                         'current' => 0,
                         'previous' => -1,
                         'next' => -1,
-                        'last' => 0,
-                        'total' => 7,
-                        'pageFirst' => 1,
-                        'pageLast' => 7,
+                        'last' => -20,
+                        'total' => 0,
+                        'pageFirst' => 0,
+                        'pageLast' => 0,
                     ],
-                    'recordIds' => [
-                        [
-                            'id' => '18a98a48-34b1-9640-aae5-684703ad3a22',
-                        ],
-                        [
-                            'id' => '1cae196a-e245-28bd-7aa3-6847033938c8',
-                        ],
-                        [
-                            'id' => '6e6cbff5-cbcc-065c-8b00-684703e1ae06',
-                        ],
-                        [
-                            'id' => '8dbd6e41-3dc7-8967-5245-6846eb6dd6eb',
-                        ],
-                        [
-                            'id' => 'ba3c398b-9c0d-2d5a-cb36-68408295a170',
-                        ],
-                        [
-                            'id' => 'd0e945af-4829-5e5c-471d-68470ef437fa',
-                        ],
-                        [
-                            'id' => 'd64daaf6-1d5e-5872-3506-6841fb71c648',
-                        ],
-                    ],
+                    'recordIds' => [],
                 ],
                 'tasks-recordview-show-sidebar-widgets' => false,
                 'invoices-listview-show-sidebar-widgets' => false,
@@ -389,7 +370,7 @@ return [PHP_INT_MAX, [
                 ],
                 'prospects-listview-current-sort' => [
                     'orderBy' => '',
-                    'sortOrder' => 'DESC',
+                    'sortOrder' => 'NONE',
                 ],
                 'prospects-recordview-show-sidebar-widgets' => false,
                 'prospect-lists-listview-show-sidebar-widgets' => false,
@@ -409,7 +390,7 @@ return [PHP_INT_MAX, [
                 ],
                 'prospect-lists-listview-current-sort' => [
                     'orderBy' => '',
-                    'sortOrder' => 'DESC',
+                    'sortOrder' => 'NONE',
                 ],
                 'home-recordview-current-record-pagination' => [
                     'pagination' => [
@@ -424,40 +405,9 @@ return [PHP_INT_MAX, [
                     ],
                     'recordIds' => [],
                 ],
-                'prospect-lists-recordview-current-record-pagination' => [
-                    'pagination' => [
-                        'pageSize' => 20,
-                        'current' => 0,
-                        'previous' => -1,
-                        'next' => -1,
-                        'last' => -20,
-                        'total' => 0,
-                        'pageFirst' => 0,
-                        'pageLast' => 0,
-                    ],
-                    'recordIds' => [],
-                ],
-                'prospect-lists-recordview-show-sidebar-widgets' => false,
-                'outbound-email-accounts-recordview-current-record-pagination' => [
-                    'pagination' => [
-                        'pageSize' => 20,
-                        'current' => 0,
-                        'previous' => -1,
-                        'next' => -1,
-                        'last' => 0,
-                        'total' => 1,
-                        'pageFirst' => 1,
-                        'pageLast' => 1,
-                    ],
-                    'recordIds' => [
-                        [
-                            'id' => '227fba6e-e22f-bdb2-1694-678644c9a12f',
-                        ],
-                    ],
-                ],
-                'email-templates-listview-show-sidebar-widgets' => false,
-                'email-templates-listview-current-pagination-type' => 'pagination',
-                'email-templates-listview-current-filters' => [
+                'users-listview-show-sidebar-widgets' => false,
+                'users-listview-current-pagination-type' => 'pagination',
+                'users-listview-current-filters' => [
                     'default' => [
                         'key' => 'default',
                         'module' => 'saved-search',
@@ -470,57 +420,13 @@ return [PHP_INT_MAX, [
                         ],
                     ],
                 ],
-                'email-templates-listview-current-sort' => [
+                'users-listview-current-sort' => [
                     'orderBy' => '',
                     'sortOrder' => 'DESC',
                 ],
-                'email-templates-recordview-current-record-pagination' => [
-                    'pagination' => [
-                        'pageSize' => 20,
-                        'current' => 0,
-                        'previous' => -1,
-                        'next' => -1,
-                        'last' => 0,
-                        'total' => 10,
-                        'pageFirst' => 1,
-                        'pageLast' => 10,
-                    ],
-                    'recordIds' => [
-                        [
-                            'id' => '54106d1d-9843-3810-1007-678644356413',
-                        ],
-                        [
-                            'id' => '55bc0dd8-cbcc-6713-0e75-678644436a87',
-                        ],
-                        [
-                            'id' => '747f1db0-c9a3-f1f7-c9f8-6786441cd98e',
-                        ],
-                        [
-                            'id' => '7797dc76-2b56-89ed-e187-678644d086a3',
-                        ],
-                        [
-                            'id' => 'bd7c3500-10f5-5810-36d4-678644d7be96',
-                        ],
-                        [
-                            'id' => 'bf6200de-c464-322c-2f28-67864414a779',
-                        ],
-                        [
-                            'id' => 'c090e21a-1161-bc77-9664-6786440b1f10',
-                        ],
-                        [
-                            'id' => 'c356807a-4804-2ad0-4993-67864422c85a',
-                        ],
-                        [
-                            'id' => 'ee8b0cbb-aa8b-6547-8871-6786444e58e0',
-                        ],
-                        [
-                            'id' => 'b49135a4-7e1f-c4e2-0779-678644f59ec2',
-                        ],
-                    ],
-                ],
-                'leads-listview-show-sidebar-widgets' => true,
-                'leads-listview-current-pagination-type' => 'pagination',
-                'leads-listview-current-filters' => [
+                'employees-listview-show-sidebar-widgets' => false,
+                'employees-listview-current-pagination-type' => 'pagination',
+                'employees-listview-current-filters' => [
                     'default' => [
                         'key' => 'default',
                         'module' => 'saved-search',
@@ -533,22 +439,91 @@ return [PHP_INT_MAX, [
                         ],
                     ],
                 ],
-                'leads-listview-current-sort' => [
+                'employees-listview-current-sort' => [
                     'orderBy' => '',
                     'sortOrder' => 'NONE',
                 ],
-                'leads-recordview-current-record-pagination' => [
+                'users-recordview-current-record-pagination' => [
                     'pagination' => [
                         'pageSize' => 20,
                         'current' => 0,
                         'previous' => -1,
                         'next' => -1,
-                        'last' => -20,
-                        'total' => 0,
-                        'pageFirst' => 0,
-                        'pageLast' => 0,
+                        'last' => 0,
+                        'total' => 2,
+                        'pageFirst' => 1,
+                        'pageLast' => 2,
                     ],
-                    'recordIds' => [],
+                    'recordIds' => [
+                        [
+                            'id' => '1',
+                        ],
+                        [
+                            'id' => '2dca749b-da39-b519-3014-685cc3891464',
+                        ],
+                    ],
+                ],
+                'acl-roles-listview-show-sidebar-widgets' => false,
+                'acl-roles-listview-current-pagination-type' => 'pagination',
+                'acl-roles-listview-current-filters' => [
+                    'default' => [
+                        'key' => 'default',
+                        'module' => 'saved-search',
+                        'attributes' => [
+                            'contents' => '',
+                        ],
+                        'criteria' => [
+                            'name' => 'default',
+                            'filters' => [],
+                        ],
+                    ],
+                ],
+                'acl-roles-listview-current-sort' => [
+                    'orderBy' => '',
+                    'sortOrder' => 'DESC',
+                ],
+                'acl-roles-recordview-current-record-pagination' => [
+                    'pagination' => [
+                        'pageSize' => 20,
+                        'current' => 0,
+                        'previous' => -1,
+                        'next' => -1,
+                        'last' => 0,
+                        'total' => 2,
+                        'pageFirst' => 1,
+                        'pageLast' => 2,
+                    ],
+                    'recordIds' => [
+                        [
+                            'id' => '78eee375-0419-4592-6f37-685ccb3451a7',
+                        ],
+                        [
+                            'id' => 'e85b0bae-3a7f-926c-61c2-685cc5e244fe',
+                        ],
+                    ],
+                ],
+                'emails-recordview-current-record-pagination' => [
+                    'pagination' => [
+                        'pageSize' => 20,
+                        'current' => 0,
+                        'previous' => -1,
+                        'next' => -1,
+                        'last' => 0,
+                        'total' => 3,
+                        'pageFirst' => 1,
+                        'pageLast' => 3,
+                    ],
+                    'recordIds' => [
+                        [
+                            'id' => '8dbd6e41-3dc7-8967-5245-6846eb6dd6eb',
+                        ],
+                        [
+                            'id' => 'd64daaf6-1d5e-5872-3506-6841fb71c648',
+                        ],
+                        [
+                            'id' => 'ba3c398b-9c0d-2d5a-cb36-68408295a170',
+                        ],
+                    ],
                 ],
             ],
             'snooze_alert_timer' => '600',

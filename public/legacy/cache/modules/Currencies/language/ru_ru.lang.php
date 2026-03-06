@@ -1,5 +1,5 @@
 <?php
-// created: 2025-11-19 09:05:49
+// created: 2026-03-06 12:45:42
 $mod_strings = array (
   'LBL_MODULE_NAME' => 'Валюта',
   'LBL_LIST_FORM_TITLE' => 'Валюта',

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-07 15:42:33
+/* Smarty version 4.5.3, created on 2026-03-06 12:34:22
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\include\get_form_header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_690e1369ab3e78_72484397',
+  'unifunc' => 'content_69aac9ce0ad4e9_13882842',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '76ac46ea7d72790090591c28c5cb9deb1559d170' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\get_form_header.tpl',
-      1 => 1762424144,
+      1 => 1767849326,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_690e1369ab3e78_72484397 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aac9ce0ad4e9_13882842 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('is_min_max', call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'strpos' ][ 0 ], array( $_smarty_tpl->tpl_vars['other_text']->value,"_search.gif" )));
 if ($_smarty_tpl->tpl_vars['is_min_max']->value !== false) {?>
     <?php $_smarty_tpl->_assignInScope('form_title', ((string)$_smarty_tpl->tpl_vars['other_text']->value)." ".((string)$_smarty_tpl->tpl_vars['form_title']->value));

@@ -1,5 +1,5 @@
 <?php
-// created: 2025-06-09 14:12:56
+// created: 2026-03-06 12:45:40
 $mod_strings = array (
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Дата создания',
@@ -34,5 +34,6 @@ $mod_strings = array (
   'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Мероприятия',
   'LBL_NEW_FORM_TITLE' => 'Создать уведомление',
   'LBL_IS_READ' => 'Прочитано',
+  'LBL_DATE_START' => 'Дата начала',
   'LBL_TYPE' => 'Тип',
 );

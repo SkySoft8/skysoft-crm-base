@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-07 15:44:01
+/* Smarty version 4.5.3, created on 2026-03-06 12:47:25
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\themes\suite8\include\SearchForm\tpls\SearchFormGeneric.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_690e13c1ef4320_53101314',
+  'unifunc' => 'content_69aaccdd9185f9_13899048',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '28934e881fbd797b0340fc7ea39fd93b83dadd00' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\themes\\suite8\\include\\SearchForm\\tpls\\SearchFormGeneric.tpl',
-      1 => 1762424146,
+      1 => 1767849328,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_690e13c1ef4320_53101314 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aaccdd9185f9_13899048 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.math.php','function'=>'smarty_function_math',),1=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.sugar_field.php','function'=>'smarty_function_sugar_field',),2=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.sugar_button.php','function'=>'smarty_function_sugar_button',),));
 ?>
 {*

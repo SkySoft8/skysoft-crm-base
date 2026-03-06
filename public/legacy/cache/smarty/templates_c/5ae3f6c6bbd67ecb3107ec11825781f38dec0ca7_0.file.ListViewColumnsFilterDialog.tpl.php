@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-07 15:44:06
+/* Smarty version 4.5.3, created on 2026-03-06 12:47:31
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\include\ListView\ListViewColumnsFilterDialog.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_690e13c64a1429_37667190',
+  'unifunc' => 'content_69aacce3a62d59_00718471',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5ae3f6c6bbd67ecb3107ec11825781f38dec0ca7' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\ListView\\ListViewColumnsFilterDialog.tpl',
-      1 => 1762424144,
+      1 => 1767849326,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_690e13c64a1429_37667190 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aacce3a62d59_00718471 (Smarty_Internal_Template $_smarty_tpl) {
 if (!$_smarty_tpl->tpl_vars['columnsFilterDialogAdded']->value) {?>
     <div id="columnsFilterDialog" class="modal fade modal-columns-filter" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg">

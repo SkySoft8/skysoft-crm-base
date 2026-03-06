@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-12 13:05:30
+/* Smarty version 4.5.3, created on 2026-03-06 12:47:58
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\include\SuiteEditor\tpls\SuiteEditorMozaik.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6914861ac9b831_73555007',
+  'unifunc' => 'content_69aaccfe6eddf0_59209716',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f23cd3181b47528b76f643df44298d1ab298c678' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\SuiteEditor\\tpls\\SuiteEditorMozaik.tpl',
-      1 => 1762424144,
+      1 => 1767849326,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6914861ac9b831_73555007 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aaccfe6eddf0_59209716 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- [Mozaik Editor implementation] -->
 

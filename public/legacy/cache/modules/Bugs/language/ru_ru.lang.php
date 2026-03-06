@@ -1,5 +1,5 @@
 <?php
-// created: 2025-06-09 14:12:52
+// created: 2026-03-06 12:45:40
 $mod_strings = array (
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Дата ввода:',
@@ -68,6 +68,7 @@ $mod_strings = array (
   'LBL_LIST_ACCOUNT_NAME' => 'Контрагент',
   'LBL_LIST_PHONE' => 'Тел.',
   'NTC_DELETE_CONFIRMATION' => 'Вы действительно хотите удалить этот контакт из данной ошибки?',
+  'NTC_SNOOZE_CONFIRMATION' => 'Вы действительно хотите отложить уведомление?',
   'LBL_DEFAULT_SUBPANEL_TITLE' => 'Ошибки',
   'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Мероприятия',
   'LBL_HISTORY_SUBPANEL_TITLE' => 'История',

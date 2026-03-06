@@ -90,3 +90,14 @@ Wed Jun  4 16:17:11 2025 [71248][1][FATAL] Email address save error
 Wed Jun  4 16:17:58 2025 [71248][1][FATAL] Email address save error
 Wed Jun  4 16:40:54 2025 [71248][1][FATAL] Email address save error
 Wed Jun  4 17:14:31 2025 [71248][1][FATAL] Email address save error
+Fri Mar  6 09:54:50 2026 [23704][-none-][FATAL] Mysqli_query failed.
+Fri Mar  6 09:54:50 2026 [23704][-none-][FATAL]  Query Failed: SELECT id, name, symbol, conversion_rate FROM currencies WHERE status = 'Active' and deleted = 0: MySQL error 1146: Table 'base_crmdatabase.currencies' doesn't exist
+Fri Mar  6 09:54:50 2026 [23704][-none-][FATAL] Mysqli_query failed.
+Fri Mar  6 09:54:50 2026 [23704][-none-][FATAL] Unable to retrieve system settings Query Failed: SELECT category, name, value FROM config: MySQL error 1146: Table 'base_crmdatabase.config' doesn't exist
+Fri Mar  6 09:54:58 2026 [23704][-none-][FATAL] Mysqli_query failed.
+Fri Mar  6 09:54:58 2026 [23704][-none-][FATAL]  Query Failed: SELECT id, name, symbol, conversion_rate FROM currencies WHERE status = 'Active' and deleted = 0: MySQL error 1146: Table 'base_crmdatabase.currencies' doesn't exist
+Fri Mar  6 09:54:58 2026 [23704][-none-][FATAL] Mysqli_query failed.
+Fri Mar  6 09:54:58 2026 [23704][-none-][FATAL] Unable to retrieve system settings Query Failed: SELECT category, name, value FROM config: MySQL error 1146: Table 'base_crmdatabase.config' doesn't exist
+Fri Mar  6 11:47:52 2026 [12216][1][FATAL] Email address save error
+Fri Mar 6 2026 at 12:21:34 [22096][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Fri Mar 6 2026 at 12:21:53 [22096][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist

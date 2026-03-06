@@ -1,5 +1,5 @@
 <?php
-// created: 2025-11-19 09:06:02
+// created: 2026-03-06 12:45:47
 $mod_strings = array (
   'LBL_RECORDS_SKIPPED_DUE_TO_ERROR' => 'Строки не импортированы из-за возникшей ошибки',
   'LBL_UPDATE_SUCCESSFULLY' => 'записей успешно обновлены',

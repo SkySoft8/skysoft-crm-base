@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-07 15:42:35
+/* Smarty version 4.5.3, created on 2026-03-06 12:34:23
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\modules\SugarFeed\Dashlets\SugarFeedDashlet\UserPostForm.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_690e136b644894_31340453',
+  'unifunc' => 'content_69aac9cf833648_20464903',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eb9b9b9c387bae40a1891628cd8b6efa45313139' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\modules\\SugarFeed\\Dashlets\\SugarFeedDashlet\\UserPostForm.tpl',
-      1 => 1762424144,
+      1 => 1767849326,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_690e136b644894_31340453 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aac9cf833648_20464903 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.sugar_translate.php','function'=>'smarty_function_sugar_translate',),1=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 ?>
 

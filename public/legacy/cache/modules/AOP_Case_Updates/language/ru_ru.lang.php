@@ -1,5 +1,5 @@
 <?php
-// created: 2025-06-09 14:13:00
+// created: 2026-03-06 12:45:45
 $mod_strings = array (
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Дата создания',
@@ -37,4 +37,6 @@ $mod_strings = array (
   'LBL_CONTACT_NAME' => 'Контакт',
   'LBL_INTERNAL' => 'Внутреннее обновление',
   'LBL_AOP_CASE_ATTACHMENTS' => 'Вложения: ',
+  'LBL_AUTHOR' => 'Автор',
+  'LBL_SOURCE' => 'Источник',
 );

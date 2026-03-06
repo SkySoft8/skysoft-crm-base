@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-12 12:44:53
+/* Smarty version 4.5.3, created on 2026-03-06 12:47:27
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\cache\themes\suite8\modules\Emails\SearchFormHeader.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_691481454d1af3_36304199',
+  'unifunc' => 'content_69aaccdfb41f19_46437982',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e243e75dc336341d42d46bd950c093500983736e' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\cache\\themes\\suite8\\modules\\Emails\\SearchFormHeader.tpl',
-      1 => 1762951493,
+      1 => 1772801247,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:include/SearchForm/tpls/headerPopup.tpl' => 1,
   ),
 ),false)) {
-function content_691481454d1af3_36304199 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aaccdfb41f19_46437982 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.sugar_getjspath.php','function'=>'smarty_function_sugar_getjspath',),));
 ?>
 

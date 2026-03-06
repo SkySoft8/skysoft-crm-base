@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-14 08:53:53
+/* Smarty version 4.5.3, created on 2026-03-06 12:44:02
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\ModuleInstall\PackageManager\tpls\PackageManagerScripts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6916ee219370c9_44719818',
+  'unifunc' => 'content_69aacc123f8384_89691477',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9451797b61aece634812e920099795dad14dc6c7' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\ModuleInstall\\PackageManager\\tpls\\PackageManagerScripts.tpl',
-      1 => 1762424144,
+      1 => 1767849326,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6916ee219370c9_44719818 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aacc123f8384_89691477 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.sugar_getscript.php','function'=>'smarty_function_sugar_getscript',),));
 echo smarty_function_sugar_getscript(array('file'=>"cache/include/javascript/sugar_grp_yui_widgets.js"),$_smarty_tpl);?>
 

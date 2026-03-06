@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-12 13:05:30
+/* Smarty version 4.5.3, created on 2026-03-06 12:47:58
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\include\SuiteEditor\tpls\SuiteEditorConnector.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6914861af1ac13_01567774',
+  'unifunc' => 'content_69aaccfe972059_03912521',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'be62ddd1d6caeda217738d69ed62a7ca3bf8061f' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\SuiteEditor\\tpls\\SuiteEditorConnector.tpl',
-      1 => 1762424144,
+      1 => 1767849326,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6914861af1ac13_01567774 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aaccfe972059_03912521 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
 >
     if(!SuiteEditor) {

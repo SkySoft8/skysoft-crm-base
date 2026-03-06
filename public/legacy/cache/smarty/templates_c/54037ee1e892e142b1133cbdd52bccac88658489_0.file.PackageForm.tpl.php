@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-14 08:53:54
+/* Smarty version 4.5.3, created on 2026-03-06 12:44:03
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\ModuleInstall\PackageManager\tpls\PackageForm.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6916ee223f3145_82549286',
+  'unifunc' => 'content_69aacc1316b6c3_44156470',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '54037ee1e892e142b1133cbdd52bccac88658489' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\ModuleInstall\\PackageManager\\tpls\\PackageForm.tpl',
-      1 => 1762424144,
+      1 => 1767849326,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6916ee223f3145_82549286 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aacc1316b6c3_44156470 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['ERR_SUHOSIN']->value == true) {
 echo $_smarty_tpl->tpl_vars['APP_STRINGS']->value['ERR_SUHOSIN'];?>
 

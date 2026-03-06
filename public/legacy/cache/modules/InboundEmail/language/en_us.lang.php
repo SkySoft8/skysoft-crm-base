@@ -1,6 +1,8 @@
 <?php
-// created: 2025-11-07 15:41:52
+// created: 2026-03-06 12:21:30
 $mod_strings = array (
+  'LBL_SECURITYGROUPS' => 'Security Groups',
+  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Security Groups',
   'LBL_RE' => 'RE:',
   'ERR_BAD_LOGIN_PASSWORD' => 'Login or Password Incorrect',
   'ERR_INI_ZLIB' => 'Could not turn off Zlib compression temporarily. "Test Settings" may fail.',
@@ -131,7 +133,6 @@ $mod_strings = array (
   'LBL_AUTO_REPLY_CONFIGURATION' => 'Auto Reply Configuration',
   'LBL_CASE_CONFIGURATION' => 'Case Configuration',
   'LBL_GROUP_CONFIGURATION' => 'Group Configuration',
-  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Security Groups',
   'LBL_OUTBOUND_EMAIL_ACCOUNT' => 'Outbound Email Account',
   'LBL_OUTBOUND_EMAIL_ACCOUNT_ID' => 'Outbound Email Account id',
   'LBL_OUTBOUND_EMAIL_ACCOUNT_NAME' => 'Outbound Email Account',

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-07 15:42:15
+/* Smarty version 4.5.3, created on 2026-03-06 12:34:10
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\modules\Emails\templates\displayIndicatorField.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_690e1357714946_18439475',
+  'unifunc' => 'content_69aac9c2b2d228_91819636',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dca39017cf23920e6d14101b6712ceb9c29c7113' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\modules\\Emails\\templates\\displayIndicatorField.tpl',
-      1 => 1762424144,
+      1 => 1767849326,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_690e1357714946_18439475 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aac9c2b2d228_91819636 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="email-indicator">
     <?php if (!empty($_smarty_tpl->tpl_vars['bean']->value)) {?>

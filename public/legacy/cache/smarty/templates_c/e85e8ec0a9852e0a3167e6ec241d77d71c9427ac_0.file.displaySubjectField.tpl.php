@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-07 15:42:15
+/* Smarty version 4.5.3, created on 2026-03-06 12:34:10
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\modules\Emails\templates\displaySubjectField.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_690e13578890e3_88592728',
+  'unifunc' => 'content_69aac9c2cc95f5_48848076',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e85e8ec0a9852e0a3167e6ec241d77d71c9427ac' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\modules\\Emails\\templates\\displaySubjectField.tpl',
-      1 => 1762424144,
+      1 => 1767849326,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_690e13578890e3_88592728 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aac9c2cc95f5_48848076 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.convert_link.php','function'=>'smarty_function_convert_link',),));
 ?>
 <div class="email-subject">

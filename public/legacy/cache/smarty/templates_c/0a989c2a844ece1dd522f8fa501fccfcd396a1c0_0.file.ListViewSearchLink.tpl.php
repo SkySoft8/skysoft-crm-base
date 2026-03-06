@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-07 15:44:06
+/* Smarty version 4.5.3, created on 2026-03-06 12:47:31
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\include\ListView\ListViewSearchLink.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_690e13c6714521_46270783',
+  'unifunc' => 'content_69aacce3d745f1_03500874',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a989c2a844ece1dd522f8fa501fccfcd396a1c0' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\ListView\\ListViewSearchLink.tpl',
-      1 => 1762424144,
+      1 => 1767849326,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_690e13c6714521_46270783 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aacce3d745f1_03500874 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.sugar_translate.php','function'=>'smarty_function_sugar_translate',),));
 ?>
 

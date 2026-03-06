@@ -1,5 +1,5 @@
 <?php
-// created: 2025-11-19 09:05:50
+// created: 2026-03-06 12:45:42
 $mod_strings = array (
   'LBL_LIST_ID' => 'ID списка адресатов',
   'LBL_ID' => 'ID',

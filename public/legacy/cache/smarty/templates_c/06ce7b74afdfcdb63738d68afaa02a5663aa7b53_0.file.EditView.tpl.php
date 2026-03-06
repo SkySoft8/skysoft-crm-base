@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-07 15:44:02
+/* Smarty version 4.5.3, created on 2026-03-06 12:47:25
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\include\SugarFields\Fields\Base\EditView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_690e13c2426d45_96795001',
+  'unifunc' => 'content_69aaccdde6b830_35497061',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '06ce7b74afdfcdb63738d68afaa02a5663aa7b53' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\SugarFields\\Fields\\Base\\EditView.tpl',
-      1 => 1762424144,
+      1 => 1767849326,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_690e13c2426d45_96795001 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aaccdde6b830_35497061 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.sugarvar.php','function'=>'smarty_function_sugarvar',),1=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.sugar_translate.php','function'=>'smarty_function_sugar_translate',),));
 ?>
 {*

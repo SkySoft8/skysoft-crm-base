@@ -1,8 +1,6 @@
 <?php
-// created: 2025-11-07 15:41:50
+// created: 2026-03-06 12:21:31
 $mod_strings = array (
-  'LBL_ASSIGNED_TO_ID' => 'Assigned User Id',
-  'LBL_ASSIGNED_TO_NAME' => 'SuiteCRM User',
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Date Created',
   'LBL_DATE_MODIFIED' => 'Date Modified',
@@ -15,6 +13,16 @@ $mod_strings = array (
   'LBL_CREATED_USER' => 'Created By User',
   'LBL_MODIFIED_USER' => 'Modified By User',
   'LBL_LIST_NAME' => 'Name',
+  'LBL_EDIT_BUTTON' => 'Edit',
+  'LBL_REMOVE' => 'Remove',
+  'LBL_ASCENDING' => 'Ascending',
+  'LBL_DESCENDING' => 'Descending',
+  'LBL_OPT_IN' => 'Opt In',
+  'LBL_OPT_IN_PENDING_EMAIL_NOT_SENT' => 'Pending Confirm opt in, Confirm opt in not sent',
+  'LBL_OPT_IN_PENDING_EMAIL_SENT' => 'Pending Confirm opt in, Confirm opt in sent',
+  'LBL_OPT_IN_CONFIRMED' => 'Opted in',
+  'LBL_ASSIGNED_TO_ID' => 'Assigned User Id',
+  'LBL_ASSIGNED_TO_NAME' => 'SuiteCRM User',
   'LBL_LIST_FORM_TITLE' => 'External Account List',
   'LBL_MODULE_NAME' => 'External Account',
   'LBL_MODULE_TITLE' => 'External Accounts',

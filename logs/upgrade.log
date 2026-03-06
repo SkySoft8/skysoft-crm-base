@@ -260,3 +260,250 @@ Fri, 07 Nov 2025 15:19:56 +0000 [UpgradeWizard] - Upgrade completed successfully
 [2025-11-07 15:19:56] upgrade.INFO: step: finalize-clear-symfony-cache | messages: [] []
 [2025-11-07 15:19:56] upgrade.INFO: Successfully cleared cache [] []
 [2025-11-07 15:19:56] upgrade.INFO: step: finalize-clear-symfony-cache | debug: no debug info [] []
+[2026-03-06 12:20:31] upgrade.INFO: Running step: legacy-post-upgrade [] []
+Fri, 06 Mar 2026 12:20:31 +0000 [UpgradeWizard] - begin check default permissions .
+Fri, 06 Mar 2026 12:20:31 +0000 [UpgradeWizard] - end check default permissions .
+Fri, 06 Mar 2026 12:20:31 +0000 [UpgradeWizard] - begin check logger settings .
+Fri, 06 Mar 2026 12:20:31 +0000 [UpgradeWizard] - begin check logger settings .
+Fri, 06 Mar 2026 12:20:31 +0000 [UpgradeWizard] - begin check lead conversion settings .
+Fri, 06 Mar 2026 12:20:31 +0000 [UpgradeWizard] - end check lead conversion settings .
+Fri, 06 Mar 2026 12:20:31 +0000 [UpgradeWizard] - begin check resource settings .
+Fri, 06 Mar 2026 12:20:31 +0000 [UpgradeWizard] - begin check resource settings .
+Fri, 06 Mar 2026 12:20:32 +0000 [UpgradeWizard] - Call deleteCache
+Fri, 06 Mar 2026 12:21:22 +0000 [UpgradeWizard] - Upgrading user preferences start .
+Fri, 06 Mar 2026 12:21:26 +0000 [UpgradeWizard] - Upgrading user preferences finish .
+Fri, 06 Mar 2026 12:21:26 +0000 [UpgradeWizard] - Call deleteCache
+Fri, 06 Mar 2026 12:21:27 +0000 [UpgradeWizard] - About to repair the database.
+Fri, 06 Mar 2026 12:21:35 +0000 [UpgradeWizard] - Running sql:/* Table : campaign_log */
+/*COLUMNS*/
+/*MISSING IN DATABASE - is_test_entry -  ROW*/
+/*MISMATCH WITH DATABASE - related_type -  ROW [name] => 'related_type'  [type] => 'varchar'  [len] => '100'  */
+/* VARDEF - related_type -  ROW[name] => 'related_type'  [vname] => 'LBL_RELATED_TYPE'  [type] => 'varchar'  [dbType] => 'varchar'  [group] => 'parent_name'  [options] => 'parent_type_display'  [required] => ''  [len] => '255'  */
+/*MISMATCH WITH DATABASE - related_id -  ROW [name] => 'related_id'  [type] => 'varchar'  [len] => '36'  */
+/* VARDEF - related_id -  ROW[name] => 'related_id'  [type] => 'char'  [group] => 'parent_name'  [reportable] => ''  [vname] => 'LBL_RELATED_ID'  [dbType] => 'id'  [len] => '36'  */
+/* INDEXES */
+/*MISSING INDEX IN DATABASE - idx_related -index  ROW */
+ALTER TABLE campaign_log   add COLUMN `is_test_entry` bool  DEFAULT '0' NULL ,  modify COLUMN `related_type` varchar(255)  NULL ,  modify COLUMN `related_id` char(36)  NULL ,  ADD INDEX idx_related (related_id,related_type,marketing_id,deleted)
+
+Fri, 06 Mar 2026 12:21:36 +0000 [UpgradeWizard] - Running sql:/* Table : campaigns */
+/*COLUMNS*/
+/*MISSING IN DATABASE - budget_usdollar -  ROW*/
+/*MISSING IN DATABASE - expected_cost_usdollar -  ROW*/
+/*MISSING IN DATABASE - actual_cost_usdollar -  ROW*/
+/*MISSING IN DATABASE - expected_revenue_usdollar -  ROW*/
+/* INDEXES */
+ALTER TABLE campaigns   add COLUMN `budget_usdollar` double  NULL ,  add COLUMN `expected_cost_usdollar` double  NULL ,  add COLUMN `actual_cost_usdollar` double  NULL ,  add COLUMN `expected_revenue_usdollar` double  NULL 
+
+Fri, 06 Mar 2026 12:21:36 +0000 [UpgradeWizard] - Running sql:/* Table : prospect_lists */
+/*COLUMNS*/
+/* INDEXES */
+/*MISSING INDEX IN DATABASE - idx_list_type -index  ROW */
+ALTER TABLE prospect_lists   ADD INDEX idx_list_type (list_type)
+
+Fri, 06 Mar 2026 12:21:36 +0000 [UpgradeWizard] - Running sql:/* Table : email_marketing */
+/*COLUMNS*/
+/*MISSING IN DATABASE - duplicate -  ROW*/
+/*MISSING IN DATABASE - queueing_status -  ROW*/
+/*MISSING IN DATABASE - type -  ROW*/
+/*MISSING IN DATABASE - has_test_data -  ROW*/
+/*MISSING IN DATABASE - trackers_enabled -  ROW*/
+/*MISSING IN DATABASE - subject -  ROW*/
+/*MISSING IN DATABASE - body -  ROW*/
+/*MISSING IN DATABASE - survey_id -  ROW*/
+/* INDEXES */
+/*MISSING INDEX IN DATABASE - idx_status -index  ROW */
+/*MISSING INDEX IN DATABASE - idx_date_start -index  ROW */
+/*MISSING INDEX IN DATABASE - idx_survey_id -index  ROW */
+ALTER TABLE email_marketing   add COLUMN `duplicate` varchar(255)  DEFAULT 'email' NULL ,  add COLUMN `queueing_status` varchar(100)  DEFAULT 'not_started' NULL ,  add COLUMN `type` varchar(100)  NULL ,  add COLUMN `has_test_data` bool  DEFAULT '0' NULL ,  add COLUMN `trackers_enabled` bool  DEFAULT '0' NULL ,  add COLUMN `subject` varchar(255)  NULL ,  add COLUMN `body` longtext  NULL ,  add COLUMN `survey_id` char(36)  NULL ,  ADD INDEX idx_status (status),  ADD INDEX idx_date_start (date_start),  ADD INDEX idx_survey_id (survey_id)
+
+Fri, 06 Mar 2026 12:21:36 +0000 [UpgradeWizard] - Running sql:/* Table : emailman */
+/*COLUMNS*/
+/*MISSING IN DATABASE - more_information -  ROW*/
+/* INDEXES */
+/*MISSING INDEX IN DATABASE - idx_eman_related -index  ROW */
+ALTER TABLE emailman   add COLUMN `more_information` varchar(100)  NULL ,  ADD INDEX idx_eman_related (related_id,related_type,marketing_id,deleted)
+
+Fri, 06 Mar 2026 12:21:37 +0000 [UpgradeWizard] - Running sql:/* Table : emails */
+/*COLUMNS*/
+/*MISSING IN DATABASE - outbound_email_id -  ROW*/
+/* INDEXES */
+ALTER TABLE emails   add COLUMN `outbound_email_id` char(36)  NULL 
+
+Fri, 06 Mar 2026 12:21:43 +0000 [UpgradeWizard] - Running sql:/* Table : outbound_email */
+/*COLUMNS*/
+/*MISSING IN DATABASE - is_personal -  ROW*/
+/*MISSING IN DATABASE - auth_type -  ROW*/
+/*MISSING IN DATABASE - external_oauth_connection_id -  ROW*/
+/* INDEXES */
+ALTER TABLE outbound_email   add COLUMN `is_personal` bool  DEFAULT '0' NULL ,  add COLUMN `auth_type` varchar(255)  DEFAULT 'no_auth' NULL ,  add COLUMN `external_oauth_connection_id` char(36)  NULL 
+
+Fri, 06 Mar 2026 12:21:43 +0000 [UpgradeWizard] - Running sql:/* Table : external_oauth_providers */
+/*COLUMNS*/
+/*MISSING IN DATABASE - redirect_uri_type -  ROW*/
+/* INDEXES */
+ALTER TABLE external_oauth_providers   add COLUMN `redirect_uri_type` varchar(50)  DEFAULT 'pretty_url' NULL 
+
+Fri, 06 Mar 2026 12:21:44 +0000 [UpgradeWizard] - Running sql:/* Table : archived_documents_media_objects */
+/* MISSING TABLE: archived_documents_media_objects */
+CREATE TABLE archived_documents_media_objects (`id` char(36)  NOT NULL ,`name` varchar(255)  NULL ,`date_entered` datetime  NULL ,`date_modified` datetime  NULL ,`modified_user_id` char(36)  NULL ,`created_by` char(36)  NULL ,`description` text  NULL ,`deleted` bool  DEFAULT '0' NULL ,`assigned_user_id` char(36)  NULL ,`file_path` varchar(255)  NULL ,`size` int  NULL ,`mime_type` varchar(255)  NULL ,`original_name` varchar(255)  NULL ,`dimensions` varchar(50)  NULL ,`parent_type` varchar(100)  NULL ,`parent_id` char(36)  NULL ,`parent_field` varchar(100)  NULL ,`temporary` bool  DEFAULT '1' NULL  , PRIMARY KEY (id)) CHARACTER SET utf8 COLLATE utf8_general_ci
+
+Fri, 06 Mar 2026 12:21:44 +0000 [UpgradeWizard] - Running sql:/* Table : private_documents_media_objects */
+/* MISSING TABLE: private_documents_media_objects */
+CREATE TABLE private_documents_media_objects (`id` char(36)  NOT NULL ,`name` varchar(255)  NULL ,`date_entered` datetime  NULL ,`date_modified` datetime  NULL ,`modified_user_id` char(36)  NULL ,`created_by` char(36)  NULL ,`description` text  NULL ,`deleted` bool  DEFAULT '0' NULL ,`assigned_user_id` char(36)  NULL ,`file_path` varchar(255)  NULL ,`size` int  NULL ,`mime_type` varchar(255)  NULL ,`original_name` varchar(255)  NULL ,`dimensions` varchar(50)  NULL ,`parent_type` varchar(100)  NULL ,`parent_id` char(36)  NULL ,`parent_field` varchar(100)  NULL ,`temporary` bool  DEFAULT '1' NULL  , PRIMARY KEY (id)) CHARACTER SET utf8 COLLATE utf8_general_ci
+
+Fri, 06 Mar 2026 12:21:44 +0000 [UpgradeWizard] - Running sql:/* Table : private_images_media_objects */
+/* MISSING TABLE: private_images_media_objects */
+CREATE TABLE private_images_media_objects (`id` char(36)  NOT NULL ,`name` varchar(255)  NULL ,`date_entered` datetime  NULL ,`date_modified` datetime  NULL ,`modified_user_id` char(36)  NULL ,`created_by` char(36)  NULL ,`description` text  NULL ,`deleted` bool  DEFAULT '0' NULL ,`assigned_user_id` char(36)  NULL ,`file_path` varchar(255)  NULL ,`size` int  NULL ,`mime_type` varchar(255)  NULL ,`original_name` varchar(255)  NULL ,`dimensions` varchar(50)  NULL ,`parent_type` varchar(100)  NULL ,`parent_id` char(36)  NULL ,`parent_field` varchar(100)  NULL ,`temporary` bool  DEFAULT '1' NULL  , PRIMARY KEY (id)) CHARACTER SET utf8 COLLATE utf8_general_ci
+
+Fri, 06 Mar 2026 12:21:44 +0000 [UpgradeWizard] - Running sql:/* Table : public_documents_media_objects */
+/* MISSING TABLE: public_documents_media_objects */
+CREATE TABLE public_documents_media_objects (`id` char(36)  NOT NULL ,`name` varchar(255)  NULL ,`date_entered` datetime  NULL ,`date_modified` datetime  NULL ,`modified_user_id` char(36)  NULL ,`created_by` char(36)  NULL ,`description` text  NULL ,`deleted` bool  DEFAULT '0' NULL ,`assigned_user_id` char(36)  NULL ,`file_path` varchar(255)  NULL ,`size` int  NULL ,`mime_type` varchar(255)  NULL ,`original_name` varchar(255)  NULL ,`dimensions` varchar(50)  NULL ,`parent_type` varchar(100)  NULL ,`parent_id` char(36)  NULL ,`parent_field` varchar(100)  NULL ,`temporary` bool  DEFAULT '1' NULL  , PRIMARY KEY (id)) CHARACTER SET utf8 COLLATE utf8_general_ci
+
+Fri, 06 Mar 2026 12:21:44 +0000 [UpgradeWizard] - Running sql:/* Table : public_images_media_objects */
+/* MISSING TABLE: public_images_media_objects */
+CREATE TABLE public_images_media_objects (`id` char(36)  NOT NULL ,`name` varchar(255)  NULL ,`date_entered` datetime  NULL ,`date_modified` datetime  NULL ,`modified_user_id` char(36)  NULL ,`created_by` char(36)  NULL ,`description` text  NULL ,`deleted` bool  DEFAULT '0' NULL ,`assigned_user_id` char(36)  NULL ,`file_path` varchar(255)  NULL ,`size` int  NULL ,`mime_type` varchar(255)  NULL ,`original_name` varchar(255)  NULL ,`dimensions` varchar(50)  NULL ,`parent_type` varchar(100)  NULL ,`parent_id` char(36)  NULL ,`parent_field` varchar(100)  NULL ,`temporary` bool  DEFAULT '1' NULL  , PRIMARY KEY (id)) CHARACTER SET utf8 COLLATE utf8_general_ci
+
+Fri, 06 Mar 2026 12:21:44 +0000 [UpgradeWizard] - /* Table : prospect_lists_prospects */
+/*COLUMNS*/
+/* INDEXES */
+/*MISSING INDEX IN DATABASE - idx_related -index  ROW */
+ALTER TABLE prospect_lists_prospects   ADD INDEX idx_related (related_id,related_type,deleted)
+
+Fri, 06 Mar 2026 12:21:45 +0000 [UpgradeWizard] - /* Table : email_marketing_prospect_lists */
+/*COLUMNS*/
+/* INDEXES */
+/*MISSING INDEX IN DATABASE - idx_prospect_list_id -index  ROW */
+/*MISSING INDEX IN DATABASE - idx_email_marketing_id -index  ROW */
+ALTER TABLE email_marketing_prospect_lists   ADD INDEX idx_prospect_list_id (prospect_list_id),  ADD INDEX idx_email_marketing_id (email_marketing_id)
+
+Fri, 06 Mar 2026 12:21:45 +0000 [UpgradeWizard] - database repaired
+Fri, 06 Mar 2026 12:21:45 +0000 [UpgradeWizard] - Start rebuild relationships.
+Fri, 06 Mar 2026 12:21:54 +0000 [UpgradeWizard] - End rebuild relationships.
+Fri, 06 Mar 2026 12:21:54 +0000 [UpgradeWizard] - Begin merge_config_si_settings
+Fri, 06 Mar 2026 12:21:54 +0000 [UpgradeWizard] - config.php file at () could not be found.  Skip merging.
+Fri, 06 Mar 2026 12:21:54 +0000 [UpgradeWizard] - End merge_config_si_settings
+Fri, 06 Mar 2026 12:21:54 +0000 [UpgradeWizard] - Begin upgrade_connectors
+Fri, 06 Mar 2026 12:21:54 +0000 [UpgradeWizard] - End upgrade_connectors
+Fri, 06 Mar 2026 12:21:55 +0000 [UpgradeWizard] - Potential PHP generated error messages: 
+Fri, 06 Mar 2026 12:21:55 +0000 [UpgradeWizard] - Upgrade completed successfully.
+[2026-03-06 12:21:55] upgrade.INFO: step: legacy-post-upgrade | status: done [] []
+[2026-03-06 12:21:55] upgrade.INFO: step: legacy-post-upgrade | messages: [] []
+[2026-03-06 12:21:55] upgrade.INFO: Post Upgrade process complete [] []
+[2026-03-06 12:21:55] upgrade.INFO: step: legacy-post-upgrade | debug: [] []
+[2026-03-06 12:21:55] upgrade.INFO: begin check default permissions . [] []
+[2026-03-06 12:21:55] upgrade.INFO: end check default permissions . [] []
+[2026-03-06 12:21:55] upgrade.INFO: begin check logger settings . [] []
+[2026-03-06 12:21:55] upgrade.INFO: begin check logger settings . [] []
+[2026-03-06 12:21:55] upgrade.INFO: begin check lead conversion settings . [] []
+[2026-03-06 12:21:55] upgrade.INFO: end check lead conversion settings . [] []
+[2026-03-06 12:21:55] upgrade.INFO: begin check resource settings . [] []
+[2026-03-06 12:21:55] upgrade.INFO: begin check resource settings . [] []
+[2026-03-06 12:21:55] upgrade.INFO: Call deleteCache [] []
+[2026-03-06 12:21:55] upgrade.INFO: Upgrading user preferences start . [] []
+[2026-03-06 12:21:55] upgrade.INFO: Upgrading user preferences finish . [] []
+[2026-03-06 12:21:55] upgrade.INFO: Call deleteCache [] []
+[2026-03-06 12:21:55] upgrade.INFO: About to repair the database. [] []
+[2026-03-06 12:21:55] upgrade.INFO: Running sql:/* Table : campaign_log */ /*COLUMNS*/ /*MISSING IN DATABASE - is_test_entry -  ROW*/ /*MISMATCH WITH DATABASE - related_type -  ROW [name] => 'related_type'  [type] => 'varchar'  [len] => '100'  */ /* VARDEF - related_type -  ROW[name] => 'related_type'  [vname] => 'LBL_RELATED_TYPE'  [type] => 'varchar'  [dbType] => 'varchar'  [group] => 'parent_name'  [options] => 'parent_type_display'  [required] => ''  [len] => '255'  */ /*MISMATCH WITH DATABASE - related_id -  ROW [name] => 'related_id'  [type] => 'varchar'  [len] => '36'  */ /* VARDEF - related_id -  ROW[name] => 'related_id'  [type] => 'char'  [group] => 'parent_name'  [reportable] => ''  [vname] => 'LBL_RELATED_ID'  [dbType] => 'id'  [len] => '36'  */ /* INDEXES */ /*MISSING INDEX IN DATABASE - idx_related -index  ROW */ ALTER TABLE campaign_log   add COLUMN `is_test_entry` bool  DEFAULT '0' NULL ,  modify COLUMN `related_type` varchar(255)  NULL ,  modify COLUMN `related_id` char(36)  NULL ,  ADD INDEX idx_related (related_id,related_type,marketing_id,deleted)  [] []
+[2026-03-06 12:21:55] upgrade.INFO: Running sql:/* Table : campaigns */ /*COLUMNS*/ /*MISSING IN DATABASE - budget_usdollar -  ROW*/ /*MISSING IN DATABASE - expected_cost_usdollar -  ROW*/ /*MISSING IN DATABASE - actual_cost_usdollar -  ROW*/ /*MISSING IN DATABASE - expected_revenue_usdollar -  ROW*/ /* INDEXES */ ALTER TABLE campaigns   add COLUMN `budget_usdollar` double  NULL ,  add COLUMN `expected_cost_usdollar` double  NULL ,  add COLUMN `actual_cost_usdollar` double  NULL ,  add COLUMN `expected_revenue_usdollar` double  NULL   [] []
+[2026-03-06 12:21:55] upgrade.INFO: Running sql:/* Table : prospect_lists */ /*COLUMNS*/ /* INDEXES */ /*MISSING INDEX IN DATABASE - idx_list_type -index  ROW */ ALTER TABLE prospect_lists   ADD INDEX idx_list_type (list_type)  [] []
+[2026-03-06 12:21:55] upgrade.INFO: Running sql:/* Table : email_marketing */ /*COLUMNS*/ /*MISSING IN DATABASE - duplicate -  ROW*/ /*MISSING IN DATABASE - queueing_status -  ROW*/ /*MISSING IN DATABASE - type -  ROW*/ /*MISSING IN DATABASE - has_test_data -  ROW*/ /*MISSING IN DATABASE - trackers_enabled -  ROW*/ /*MISSING IN DATABASE - subject -  ROW*/ /*MISSING IN DATABASE - body -  ROW*/ /*MISSING IN DATABASE - survey_id -  ROW*/ /* INDEXES */ /*MISSING INDEX IN DATABASE - idx_status -index  ROW */ /*MISSING INDEX IN DATABASE - idx_date_start -index  ROW */ /*MISSING INDEX IN DATABASE - idx_survey_id -index  ROW */ ALTER TABLE email_marketing   add COLUMN `duplicate` varchar(255)  DEFAULT 'email' NULL ,  add COLUMN `queueing_status` varchar(100)  DEFAULT 'not_started' NULL ,  add COLUMN `type` varchar(100)  NULL ,  add COLUMN `has_test_data` bool  DEFAULT '0' NULL ,  add COLUMN `trackers_enabled` bool  DEFAULT '0' NULL ,  add COLUMN `subject` varchar(255)  NULL ,  add COLUMN `body` longtext  NULL ,  add COLUMN `survey_id` char(36)  NULL ,  ADD INDEX idx_status (status),  ADD INDEX idx_date_start (date_start),  ADD INDEX idx_survey_id (survey_id)  [] []
+[2026-03-06 12:21:55] upgrade.INFO: Running sql:/* Table : emailman */ /*COLUMNS*/ /*MISSING IN DATABASE - more_information -  ROW*/ /* INDEXES */ /*MISSING INDEX IN DATABASE - idx_eman_related -index  ROW */ ALTER TABLE emailman   add COLUMN `more_information` varchar(100)  NULL ,  ADD INDEX idx_eman_related (related_id,related_type,marketing_id,deleted)  [] []
+[2026-03-06 12:21:56] upgrade.INFO: Running sql:/* Table : emails */ /*COLUMNS*/ /*MISSING IN DATABASE - outbound_email_id -  ROW*/ /* INDEXES */ ALTER TABLE emails   add COLUMN `outbound_email_id` char(36)  NULL   [] []
+[2026-03-06 12:21:56] upgrade.INFO: Running sql:/* Table : outbound_email */ /*COLUMNS*/ /*MISSING IN DATABASE - is_personal -  ROW*/ /*MISSING IN DATABASE - auth_type -  ROW*/ /*MISSING IN DATABASE - external_oauth_connection_id -  ROW*/ /* INDEXES */ ALTER TABLE outbound_email   add COLUMN `is_personal` bool  DEFAULT '0' NULL ,  add COLUMN `auth_type` varchar(255)  DEFAULT 'no_auth' NULL ,  add COLUMN `external_oauth_connection_id` char(36)  NULL   [] []
+[2026-03-06 12:21:56] upgrade.INFO: Running sql:/* Table : external_oauth_providers */ /*COLUMNS*/ /*MISSING IN DATABASE - redirect_uri_type -  ROW*/ /* INDEXES */ ALTER TABLE external_oauth_providers   add COLUMN `redirect_uri_type` varchar(50)  DEFAULT 'pretty_url' NULL   [] []
+[2026-03-06 12:21:56] upgrade.INFO: Running sql:/* Table : archived_documents_media_objects */ /* MISSING TABLE: archived_documents_media_objects */ CREATE TABLE archived_documents_media_objects (`id` char(36)  NOT NULL ,`name` varchar(255)  NULL ,`date_entered` datetime  NULL ,`date_modified` datetime  NULL ,`modified_user_id` char(36)  NULL ,`created_by` char(36)  NULL ,`description` text  NULL ,`deleted` bool  DEFAULT '0' NULL ,`assigned_user_id` char(36)  NULL ,`file_path` varchar(255)  NULL ,`size` int  NULL ,`mime_type` varchar(255)  NULL ,`original_name` varchar(255)  NULL ,`dimensions` varchar(50)  NULL ,`parent_type` varchar(100)  NULL ,`parent_id` char(36)  NULL ,`parent_field` varchar(100)  NULL ,`temporary` bool  DEFAULT '1' NULL  , PRIMARY KEY (id)) CHARACTER SET utf8 COLLATE utf8_general_ci  [] []
+[2026-03-06 12:21:56] upgrade.INFO: Running sql:/* Table : private_documents_media_objects */ /* MISSING TABLE: private_documents_media_objects */ CREATE TABLE private_documents_media_objects (`id` char(36)  NOT NULL ,`name` varchar(255)  NULL ,`date_entered` datetime  NULL ,`date_modified` datetime  NULL ,`modified_user_id` char(36)  NULL ,`created_by` char(36)  NULL ,`description` text  NULL ,`deleted` bool  DEFAULT '0' NULL ,`assigned_user_id` char(36)  NULL ,`file_path` varchar(255)  NULL ,`size` int  NULL ,`mime_type` varchar(255)  NULL ,`original_name` varchar(255)  NULL ,`dimensions` varchar(50)  NULL ,`parent_type` varchar(100)  NULL ,`parent_id` char(36)  NULL ,`parent_field` varchar(100)  NULL ,`temporary` bool  DEFAULT '1' NULL  , PRIMARY KEY (id)) CHARACTER SET utf8 COLLATE utf8_general_ci  [] []
+[2026-03-06 12:21:56] upgrade.INFO: Running sql:/* Table : private_images_media_objects */ /* MISSING TABLE: private_images_media_objects */ CREATE TABLE private_images_media_objects (`id` char(36)  NOT NULL ,`name` varchar(255)  NULL ,`date_entered` datetime  NULL ,`date_modified` datetime  NULL ,`modified_user_id` char(36)  NULL ,`created_by` char(36)  NULL ,`description` text  NULL ,`deleted` bool  DEFAULT '0' NULL ,`assigned_user_id` char(36)  NULL ,`file_path` varchar(255)  NULL ,`size` int  NULL ,`mime_type` varchar(255)  NULL ,`original_name` varchar(255)  NULL ,`dimensions` varchar(50)  NULL ,`parent_type` varchar(100)  NULL ,`parent_id` char(36)  NULL ,`parent_field` varchar(100)  NULL ,`temporary` bool  DEFAULT '1' NULL  , PRIMARY KEY (id)) CHARACTER SET utf8 COLLATE utf8_general_ci  [] []
+[2026-03-06 12:21:56] upgrade.INFO: Running sql:/* Table : public_documents_media_objects */ /* MISSING TABLE: public_documents_media_objects */ CREATE TABLE public_documents_media_objects (`id` char(36)  NOT NULL ,`name` varchar(255)  NULL ,`date_entered` datetime  NULL ,`date_modified` datetime  NULL ,`modified_user_id` char(36)  NULL ,`created_by` char(36)  NULL ,`description` text  NULL ,`deleted` bool  DEFAULT '0' NULL ,`assigned_user_id` char(36)  NULL ,`file_path` varchar(255)  NULL ,`size` int  NULL ,`mime_type` varchar(255)  NULL ,`original_name` varchar(255)  NULL ,`dimensions` varchar(50)  NULL ,`parent_type` varchar(100)  NULL ,`parent_id` char(36)  NULL ,`parent_field` varchar(100)  NULL ,`temporary` bool  DEFAULT '1' NULL  , PRIMARY KEY (id)) CHARACTER SET utf8 COLLATE utf8_general_ci  [] []
+[2026-03-06 12:21:56] upgrade.INFO: Running sql:/* Table : public_images_media_objects */ /* MISSING TABLE: public_images_media_objects */ CREATE TABLE public_images_media_objects (`id` char(36)  NOT NULL ,`name` varchar(255)  NULL ,`date_entered` datetime  NULL ,`date_modified` datetime  NULL ,`modified_user_id` char(36)  NULL ,`created_by` char(36)  NULL ,`description` text  NULL ,`deleted` bool  DEFAULT '0' NULL ,`assigned_user_id` char(36)  NULL ,`file_path` varchar(255)  NULL ,`size` int  NULL ,`mime_type` varchar(255)  NULL ,`original_name` varchar(255)  NULL ,`dimensions` varchar(50)  NULL ,`parent_type` varchar(100)  NULL ,`parent_id` char(36)  NULL ,`parent_field` varchar(100)  NULL ,`temporary` bool  DEFAULT '1' NULL  , PRIMARY KEY (id)) CHARACTER SET utf8 COLLATE utf8_general_ci  [] []
+[2026-03-06 12:21:56] upgrade.INFO: /* Table : prospect_lists_prospects */ /*COLUMNS*/ /* INDEXES */ /*MISSING INDEX IN DATABASE - idx_related -index  ROW */ ALTER TABLE prospect_lists_prospects   ADD INDEX idx_related (related_id,related_type,deleted)  [] []
+[2026-03-06 12:21:56] upgrade.INFO: /* Table : email_marketing_prospect_lists */ /*COLUMNS*/ /* INDEXES */ /*MISSING INDEX IN DATABASE - idx_prospect_list_id -index  ROW */ /*MISSING INDEX IN DATABASE - idx_email_marketing_id -index  ROW */ ALTER TABLE email_marketing_prospect_lists   ADD INDEX idx_prospect_list_id (prospect_list_id),  ADD INDEX idx_email_marketing_id (email_marketing_id)  [] []
+[2026-03-06 12:21:56] upgrade.INFO: database repaired [] []
+[2026-03-06 12:21:56] upgrade.INFO: Start rebuild relationships. [] []
+[2026-03-06 12:21:56] upgrade.INFO: End rebuild relationships. [] []
+[2026-03-06 12:21:56] upgrade.INFO: Begin merge_config_si_settings [] []
+[2026-03-06 12:21:56] upgrade.INFO: End merge_config_si_settings [] []
+[2026-03-06 12:21:56] upgrade.INFO: Begin upgrade_connectors [] []
+[2026-03-06 12:21:56] upgrade.INFO: End upgrade_connectors [] []
+[2026-03-06 12:21:56] upgrade.INFO: Potential PHP generated error messages:  [] []
+[2026-03-06 12:21:56] upgrade.INFO: Upgrade completed successfully. [] []
+[2026-03-06 12:21:56] upgrade.INFO: Running step: add-new-config-entries [] []
+[2026-03-06 12:21:56] upgrade.INFO: step: add-new-config-entries | status: done [] []
+[2026-03-06 12:21:56] upgrade.INFO: step: add-new-config-entries | messages: [] []
+[2026-03-06 12:21:56] upgrade.INFO: Added new config entries to config file [] []
+[2026-03-06 12:21:56] upgrade.INFO: step: add-new-config-entries | debug: [] []
+[2026-03-06 12:21:56] upgrade.INFO: Adding entry default_charset [] []
+[2026-03-06 12:21:56] upgrade.INFO: Adding entry test_email_limit [] []
+[2026-03-06 12:21:56] upgrade.INFO: Adding entry max_temp_file_lifetime [] []
+[2026-03-06 12:21:56] upgrade.INFO: Adding entry max_temp_file_batch_per_table [] []
+[2026-03-06 12:21:56] upgrade.INFO: Adding entry campaign_emails_per_run_default [] []
+[2026-03-06 12:21:56] upgrade.INFO: Adding entry campaign_marketing_items_per_run_default [] []
+[2026-03-06 12:21:56] upgrade.INFO: Adding entry trackers_enabled [] []
+[2026-03-06 12:21:56] upgrade.INFO: Adding entry installed [] []
+[2026-03-06 12:21:56] upgrade.INFO: Running step: metadata-merge [] []
+[2026-03-06 12:21:56] upgrade.INFO: step: metadata-merge | status: done [] []
+[2026-03-06 12:21:56] upgrade.INFO: step: metadata-merge | messages: [] []
+[2026-03-06 12:21:56] upgrade.INFO: Metadata successfully merged [] []
+[2026-03-06 12:21:56] upgrade.INFO: step: metadata-merge | debug: no debug info [] []
+[2026-03-06 12:21:56] upgrade.INFO: Running step: run-migrations [] []
+[2026-03-06 12:21:59] upgrade.INFO: .env already contains LOCK_DSN. Skipping update. [] []
+[2026-03-06 12:21:59] upgrade.INFO: AUTH_TYPE already in .env, skipping. [] []
+[2026-03-06 12:21:59] upgrade.INFO: LDAP CONFIG already in .env, skipping. [] []
+[2026-03-06 12:21:59] upgrade.INFO: LDAP AUTO CREATE CONFIG already in .env, skipping. [] []
+[2026-03-06 12:21:59] upgrade.INFO: SAML CONFIG already in .env, skipping. [] []
+[2026-03-06 12:21:59] upgrade.INFO: LOGIN_THROTTLING_MAX_ATTEMPTS already in .env, skipping. [] []
+[2026-03-06 12:21:59] upgrade.INFO: SAML auto create option already in .env, skipping. [] []
+[2026-03-06 12:21:59] upgrade.INFO: Could not fetch all Alert records [] []
+[2026-03-06 12:21:59] upgrade.INFO: LOGIN_THROTTLING_INTERVAL already in .env, skipping. [] []
+[2026-03-06 12:21:59] upgrade.INFO: DefaultExt extension already exists, skipping. [] []
+[2026-03-06 12:21:59] upgrade.INFO: SuiteCRM is now using angular 18. [] []
+[2026-03-06 12:21:59] upgrade.INFO: 'defaultExt' and any extension that contains frontend changes will need to be rebuilt. For defaultExt you can build using `yarn run build:extension defaultExt` [] []
+[2026-03-06 12:21:59] upgrade.INFO: File: extensions/defaultExt/app/tsconfig.app.json updated using migration. [] []
+[2026-03-06 12:21:59] upgrade.INFO: - Copied: C:\Apache\Apache24\htdocs\suitecrm/tmp/package/upgrade/SuiteCRM-8.9.2-extracted/extensions/defaultExt/app/tsconfig.app.json to C:\Apache\Apache24\htdocs\suitecrm/extensions/defaultExt/app/tsconfig.app.json [] []
+[2026-03-06 12:21:59] upgrade.INFO: File: extensions/defaultExt/app/webpack.config.js updated using migration. [] []
+[2026-03-06 12:21:59] upgrade.INFO: - Copied: C:\Apache\Apache24\htdocs\suitecrm/tmp/package/upgrade/SuiteCRM-8.9.2-extracted/extensions/defaultExt/app/webpack.config.js to C:\Apache\Apache24\htdocs\suitecrm/extensions/defaultExt/app/webpack.config.js [] []
+[2026-03-06 12:21:59] upgrade.INFO: File: extensions/defaultExt/config/extension.php updated using migration. [] []
+[2026-03-06 12:21:59] upgrade.INFO: - Copied: C:\Apache\Apache24\htdocs\suitecrm/tmp/package/upgrade/SuiteCRM-8.9.2-extracted/extensions/defaultExt/config/extension.php to C:\Apache\Apache24\htdocs\suitecrm/extensions/defaultExt/config/extension.php [] []
+[2026-03-06 12:21:59] upgrade.INFO: 'defaultExt' has been disabled. It may need to be rebuilt. [] []
+[2026-03-06 12:21:59] upgrade.INFO: Warning! Extensions other than 'defaultExt' will need the following files manually updated: [] []
+[2026-03-06 12:21:59] upgrade.INFO: - extensions/your-extension/app/tsconfig.app.json [] []
+[2026-03-06 12:21:59] upgrade.INFO: - extensions/your-extension/app/webpack.config.js [] []
+[2026-03-06 12:21:59] upgrade.INFO: - extensions/your-extension/config/extension.php [] []
+[2026-03-06 12:21:59] upgrade.INFO: PDF was not found in allowed_preview config skipping... [] []
+[2026-03-06 12:21:59] upgrade.INFO: cache_rebuild table already exists [] []
+[2026-03-06 12:21:59] upgrade.INFO: An exception occurred while executing a query: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'cache_rebuild' already exists [] []
+[2026-03-06 12:21:59] upgrade.INFO: LOG CONFIGS already in .env, skipping. [] []
+[2026-03-06 12:21:59] upgrade.INFO: SAML CONFIGS already in .env, skipping. [] []
+[2026-03-06 12:21:59] upgrade.INFO: APP_SECRET already set in ENV, skipping. [] []
+[2026-03-06 12:21:59] upgrade.INFO: APP_SECRET already set in ENV, skipping. [] []
+[2026-03-06 12:21:59] upgrade.INFO: Added logs/legacy [] []
+[2026-03-06 12:21:59] upgrade.INFO: Updated Log Dir in config.php [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250425093118: Adding more_information column to emailman table [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250425093118: Unable to add more_information column to emailman table. Error:An exception occurred while executing a query: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'more_information' [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250425093637: Setting Legacy Campaign Schedulers to Inactive [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250519111227: Update Outbound Email "is_personal" column to 1 where type is user [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250618141100: Adding new field "type" to Email Marketing Table [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250618141100: Failed to add column type on Email Marketing Table. Error: An exception occurred while executing a query: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'type' [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250618141100: Updating new field "type" to value "Legacy" [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250704123538: Adding new columns "status" and "queueing_status" to Email Marketing Table [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250704123538: Failed to add column status to Email Marketing Table. Error: An exception occurred while executing a query: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'status' [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250704123538: Failed to add column queueing_status on Email Marketing Table. Error: An exception occurred while executing a query: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'queueing_status' [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250704123538: Updating new columns "status" and "queueing_status" to value "sent" and "finished" [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250704135001: Update all Email Marketing Records that have no subject or body [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250707134653: Retrieving all Target Lists associated and Email Marketing         associated with Campaigns [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250707134653: Updating Email Marketing Target Lists to Match Campaigns [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250721091301: Searching for all Email Marketing Records with no name [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250721091301: Searching for all Email Marketing Records with no name [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250912141250: Adding new schedulers to the database [] []
+[2026-03-06 12:21:59] upgrade.INFO: Migration Version20250912141250: New schedulers added to the database successfully [] []
+[2026-03-06 12:22:00] upgrade.INFO: Setting Allowed Cron Users to current running user. [] []
+[2026-03-06 12:22:00] upgrade.INFO: step: run-migrations | status: done [] []
+[2026-03-06 12:22:00] upgrade.INFO: step: run-migrations | messages: [] []
+[2026-03-06 12:22:00] upgrade.INFO: Successfully run migrations [] []
+[2026-03-06 12:22:00] upgrade.INFO: step: run-migrations | debug: [] []
+[2026-03-06 12:22:00] upgrade.INFO: 12:21:59 WARNING   [app] Migration App\Migrations\Version20200608135040 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20200608135040"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20220907112919 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20220907112919"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20220912082608 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20220912082608"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20221003150202 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20221003150202"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20230420135520 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20230420135520"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20230817141244 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20230817141244"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20231103101649 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20231103101649"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20231108164138 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20231108164138"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20231117113210 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20231117113210"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20240513131551 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20240513131551"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20240617150845 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20240617150845"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20240619160606 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20240619160606"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20241001074858 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20241001074858"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20241030150605 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20241030150605"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20250115144124 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20250115144124"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20250127092820 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20250127092820"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20250421121449 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20250421121449"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20250425093118 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20250425093118"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20250425093637 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20250425093637"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20250519111227 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20250519111227"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20250618141100 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20250618141100"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20250704123538 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20250704123538"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20250704135001 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20250704135001"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20250707134653 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20250707134653"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20250721091301 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20250721091301"] 12:21:59 WARNING   [app] Migration App\Migrations\Version20250912141250 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20250912141250"] 12:22:00 WARNING   [app] Migration App\Migrations\Version20251013072701 was executed but did not result in any SQL statements. ["version" => "App\Migrations\Version20251013072701"]   [OK] Successfully migrated to version: App\Migrations\Version20251013072701                                               [] []
+[2026-03-06 12:22:00] upgrade.INFO: Running step: finalize-clear-symfony-cache [] []
+[2026-03-06 12:22:00] upgrade.INFO: step: finalize-clear-symfony-cache | status: done [] []
+[2026-03-06 12:22:00] upgrade.INFO: step: finalize-clear-symfony-cache | messages: [] []
+[2026-03-06 12:22:00] upgrade.INFO: Successfully cleared cache [] []
+[2026-03-06 12:22:00] upgrade.INFO: step: finalize-clear-symfony-cache | debug: no debug info [] []

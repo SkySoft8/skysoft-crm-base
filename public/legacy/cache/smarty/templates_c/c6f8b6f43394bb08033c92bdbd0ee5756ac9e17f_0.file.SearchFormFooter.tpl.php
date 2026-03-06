@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2025-11-12 12:44:53
+/* Smarty version 4.5.3, created on 2026-03-06 12:47:28
   from 'C:\Apache\Apache24\htdocs\suitecrm\public\legacy\cache\themes\suite8\modules\Emails\SearchFormFooter.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_691481459a3609_26387232',
+  'unifunc' => 'content_69aacce03c2d28_49127383',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c6f8b6f43394bb08033c92bdbd0ee5756ac9e17f' => 
     array (
       0 => 'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\cache\\themes\\suite8\\modules\\Emails\\SearchFormFooter.tpl',
-      1 => 1762951493,
+      1 => 1772801248,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:include/SearchForm/tpls/footerPopup.tpl' => 1,
   ),
 ),false)) {
-function content_691481459a3609_26387232 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69aacce03c2d28_49127383 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.sugar_getimagepath.php','function'=>'smarty_function_sugar_getimagepath',),1=>array('file'=>'C:\\Apache\\Apache24\\htdocs\\suitecrm\\public\\legacy\\include\\Smarty\\plugins\\function.sugar_translate.php','function'=>'smarty_function_sugar_translate',),));
 ?>
 
